@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:get/get.dart';
 import 'package:online_cource_app/theme/app_theme.dart';
-import 'package:online_cource_app/model/dbd_data.dart';
+import 'package:online_cource_app/Model/dbd_data.dart';
 import 'package:online_cource_app/pages/quiz_result_page.dart';
 
 class QuizPage extends StatefulWidget {

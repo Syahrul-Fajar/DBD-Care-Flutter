@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:get/get.dart';
 import 'package:online_cource_app/theme/app_theme.dart';
-import 'package:online_cource_app/model/dbd_data.dart';
+import 'package:online_cource_app/Model/dbd_data.dart';
 import 'package:online_cource_app/pages/slideshow_page.dart';
 import 'package:online_cource_app/pages/gejala_page.dart';
 import 'package:online_cource_app/pages/tanda_bahaya_page.dart';
