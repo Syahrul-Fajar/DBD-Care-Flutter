@@ -10,8 +10,7 @@ import 'package:online_cource_app/theme/app_theme.dart';
 class MainNavigationScreen extends StatefulWidget {
   final int initialIndex;
 
-  const MainNavigationScreen({Key? key, this.initialIndex = 0})
-      : super(key: key);
+  const MainNavigationScreen({super.key, this.initialIndex = 0});
 
   @override
   State<MainNavigationScreen> createState() => _MainNavigationScreenState();
@@ -25,7 +24,7 @@ class _MainNavigationScreenState extends State<MainNavigationScreen>
 
   final List<Widget> _pages = [
     const MyHomePage(),
-    CourseListPage(),
+    const CourseListPage(),
     const EnrolledCoursesScreen(),
     const ExamHome(),
     const ProfileScreen(),
@@ -189,7 +188,7 @@ class _MainNavigationScreenState extends State<MainNavigationScreen>
                 borderRadius: BorderRadius.circular(5),
               ),
             ),
-            Text(
+            const Text(
               'Quick Actions',
               style: TextStyle(
                 fontSize: 20,
@@ -285,7 +284,7 @@ class _MainNavigationScreenState extends State<MainNavigationScreen>
           const SizedBox(height: 8),
           Text(
             label,
-            style: TextStyle(
+            style: const TextStyle(
               fontSize: 12,
               color: AppTheme.textColor,
             ),

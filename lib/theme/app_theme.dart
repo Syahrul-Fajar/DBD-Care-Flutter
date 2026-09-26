@@ -44,10 +44,9 @@ class AppTheme {
     return ThemeData(
       useMaterial3: true,
       primaryColor: primaryColor,
-      colorScheme: ColorScheme.light(
+      colorScheme: const ColorScheme.light(
         primary: primaryColor,
         secondary: accentColor,
-        background: backgroundColor,
         error: errorColor,
         surface: cardColor,
       ),
@@ -105,7 +104,7 @@ class AppTheme {
           color: secondaryTextColor,
         ),
       ),
-      cardTheme: CardTheme(
+      cardTheme: CardThemeData(
         color: cardColor,
         elevation: cardElevation,
         shape: RoundedRectangleBorder(
@@ -186,7 +185,7 @@ class AppTheme {
           color: errorColor,
         ),
       ),
-      tabBarTheme: TabBarTheme(
+      tabBarTheme: TabBarThemeData(
         indicator: BoxDecoration(
           borderRadius: BorderRadius.circular(30),
           color: primaryColor,
@@ -218,8 +217,8 @@ class AppTheme {
         elevation: 8,
       ),
       checkboxTheme: CheckboxThemeData(
-        fillColor: MaterialStateProperty.resolveWith<Color>((states) {
-          if (states.contains(MaterialState.selected)) {
+        fillColor: WidgetStateProperty.resolveWith<Color>((states) {
+          if (states.contains(WidgetState.selected)) {
             return primaryColor;
           }
           return Colors.transparent;

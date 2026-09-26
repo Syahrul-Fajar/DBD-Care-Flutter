@@ -1,0 +1,51 @@
+name: Build iOS IPA (Free / No Codesign)
+
+on:
+  workflow_dispatch: # Memungkinkan kita klik "Run workflow" secara manual dari web GitHub
+  push:
+    branches:
+      - main # Otomatis build setiap push ke branch main (bisa diubah sesuai branch kamu)
+
+jobs:
+  build-ios:
+    name: Build Unsigned IPA
+    runs-on: macos-14 # Menggunakan runner macOS (gratis di GitHub Actions)
+
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+
+      - name: Setup Flutter SDK
+        uses: subosito/flutter-action@v2
+        with:
+          channel: 'stable'
+          cache: true
+
+      - name: Install Dependencies
+        run: |
+          flutter pub get
+
+      - name: Install CocoaPods
+        run: |
+          cd ios
+          pod install
+          cd ..
+
+      - name: Build iOS App (No Codesign)
+        run: |
+          flutter build ios --release --no-codesign
+
+      - name: Package to IPA
+        run: |
+          mkdir -p build/ios/ipa/Payload
+          cp -r build/ios/iphoneos/Runner.app build/ios/ipa/Payload/
+          cd build/ios/ipa
+          zip -r app.ipa Payload
+          cd ../../..
+
+      - name: Upload IPA Artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: app-release-unsigned-ipa
+          path: build/ios/ipa/app.ipa
+          retention-days: 7

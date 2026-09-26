@@ -3,10 +3,9 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:get/get.dart';
 import 'package:flutter_easyloading/flutter_easyloading.dart';
-
-import 'package:online_cource_app/auth_gate.dart';
 import 'package:online_cource_app/controllers/auth_controller.dart';
 import 'package:online_cource_app/firebase_options.dart';
+import 'package:online_cource_app/pages/opening_page.dart';
 import 'package:online_cource_app/theme/app_theme.dart';
 
 void main() async {
@@ -57,7 +56,7 @@ class MyApp extends StatelessWidget {
       title: 'E-Learning App',
       debugShowCheckedModeBanner: false,
       theme: AppTheme.lightTheme(),
-      home: const AuthGate(),
+      home: const OpeningPage(),
       builder: EasyLoading.init(),
       defaultTransition: Transition.fadeIn,
       transitionDuration: const Duration(milliseconds: 200),

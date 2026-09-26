@@ -107,7 +107,7 @@ class _SignUpPageState extends State<SignUpPage>
                             ),
                           ],
                         ),
-                        child: Center(
+                        child: const Center(
                           child: Icon(
                             Icons.person_add,
                             size: 60,
@@ -138,19 +138,19 @@ class _SignUpPageState extends State<SignUpPage>
                       decoration: InputDecoration(
                         labelText: 'Full Name',
                         hintText: 'Enter your full name',
-                        prefixIcon: Icon(Icons.person,
+                        prefixIcon: const Icon(Icons.person,
                             color: AppTheme.secondaryTextColor),
                         border: OutlineInputBorder(
                           borderRadius: BorderRadius.circular(16),
-                          borderSide: BorderSide(color: AppTheme.dividerColor),
+                          borderSide: const BorderSide(color: AppTheme.dividerColor),
                         ),
                         enabledBorder: OutlineInputBorder(
                           borderRadius: BorderRadius.circular(16),
-                          borderSide: BorderSide(color: AppTheme.dividerColor),
+                          borderSide: const BorderSide(color: AppTheme.dividerColor),
                         ),
                         focusedBorder: OutlineInputBorder(
                           borderRadius: BorderRadius.circular(16),
-                          borderSide: BorderSide(color: AppTheme.primaryColor),
+                          borderSide: const BorderSide(color: AppTheme.primaryColor),
                         ),
                         filled: true,
                         fillColor: Colors.white,
@@ -170,19 +170,19 @@ class _SignUpPageState extends State<SignUpPage>
                       decoration: InputDecoration(
                         labelText: 'Email',
                         hintText: 'Enter your email',
-                        prefixIcon: Icon(Icons.email,
+                        prefixIcon: const Icon(Icons.email,
                             color: AppTheme.secondaryTextColor),
                         border: OutlineInputBorder(
                           borderRadius: BorderRadius.circular(16),
-                          borderSide: BorderSide(color: AppTheme.dividerColor),
+                          borderSide: const BorderSide(color: AppTheme.dividerColor),
                         ),
                         enabledBorder: OutlineInputBorder(
                           borderRadius: BorderRadius.circular(16),
-                          borderSide: BorderSide(color: AppTheme.dividerColor),
+                          borderSide: const BorderSide(color: AppTheme.dividerColor),
                         ),
                         focusedBorder: OutlineInputBorder(
                           borderRadius: BorderRadius.circular(16),
-                          borderSide: BorderSide(color: AppTheme.primaryColor),
+                          borderSide: const BorderSide(color: AppTheme.primaryColor),
                         ),
                         filled: true,
                         fillColor: Colors.white,
@@ -207,7 +207,7 @@ class _SignUpPageState extends State<SignUpPage>
                       decoration: InputDecoration(
                         labelText: 'Password',
                         hintText: 'Enter your password',
-                        prefixIcon: Icon(Icons.lock,
+                        prefixIcon: const Icon(Icons.lock,
                             color: AppTheme.secondaryTextColor),
                         suffixIcon: IconButton(
                           icon: Icon(
@@ -224,15 +224,15 @@ class _SignUpPageState extends State<SignUpPage>
                         ),
                         border: OutlineInputBorder(
                           borderRadius: BorderRadius.circular(16),
-                          borderSide: BorderSide(color: AppTheme.dividerColor),
+                          borderSide: const BorderSide(color: AppTheme.dividerColor),
                         ),
                         enabledBorder: OutlineInputBorder(
                           borderRadius: BorderRadius.circular(16),
-                          borderSide: BorderSide(color: AppTheme.dividerColor),
+                          borderSide: const BorderSide(color: AppTheme.dividerColor),
                         ),
                         focusedBorder: OutlineInputBorder(
                           borderRadius: BorderRadius.circular(16),
-                          borderSide: BorderSide(color: AppTheme.primaryColor),
+                          borderSide: const BorderSide(color: AppTheme.primaryColor),
                         ),
                         filled: true,
                         fillColor: Colors.white,
@@ -281,13 +281,13 @@ class _SignUpPageState extends State<SignUpPage>
                       ),
                     ),
                     const SizedBox(height: 24),
-                    Row(
+                    const Row(
                       children: [
                         Expanded(
                           child: Divider(color: AppTheme.dividerColor),
                         ),
                         Padding(
-                          padding: const EdgeInsets.symmetric(horizontal: 16),
+                          padding: EdgeInsets.symmetric(horizontal: 16),
                           child: Text(
                             'OR',
                             style: TextStyle(
@@ -334,7 +334,7 @@ class _SignUpPageState extends State<SignUpPage>
                     Row(
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: [
-                        Text(
+                        const Text(
                           "Already have an account? ",
                           style: TextStyle(
                             color: AppTheme.secondaryTextColor,

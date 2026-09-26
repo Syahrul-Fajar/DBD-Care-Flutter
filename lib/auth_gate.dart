@@ -43,18 +43,35 @@ class AuthGate extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
             // Logo
-            Image.asset(
-              'images/logo.png',
-              width: 180,
-              height: 180,
+            Container(
+              width: 160,
+              height: 160,
+              decoration: BoxDecoration(
+                color: Colors.white,
+                shape: BoxShape.circle,
+                boxShadow: [
+                  BoxShadow(
+                    color: AppTheme.primaryColor.withOpacity(0.15),
+                    blurRadius: 30,
+                    spreadRadius: 5,
+                    offset: const Offset(0, 8),
+                  ),
+                ],
+              ),
+              child: ClipOval(
+                child: Image.asset(
+                  'assets/logo_dbd_care.jpg',
+                  fit: BoxFit.contain,
+                ),
+              ),
             ),
             const SizedBox(height: 40),
             // Loading indicator
-            CircularProgressIndicator(
+            const CircularProgressIndicator(
               valueColor: AlwaysStoppedAnimation<Color>(AppTheme.primaryColor),
             ),
             const SizedBox(height: 24),
-            Text(
+            const Text(
               'Loading your experience...',
               style: TextStyle(
                 fontSize: 16,
@@ -95,7 +112,7 @@ class AuthGate extends StatelessWidget {
               const SizedBox(height: 16),
               Text(
                 error,
-                style: TextStyle(
+                style: const TextStyle(
                   fontSize: 16,
                   color: AppTheme.secondaryTextColor,
                 ),

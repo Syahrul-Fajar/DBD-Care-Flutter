@@ -17,10 +17,7 @@ import 'package:flutter/foundation.dart'
 class DefaultFirebaseOptions {
   static FirebaseOptions get currentPlatform {
     if (kIsWeb) {
-      throw UnsupportedError(
-        'DefaultFirebaseOptions have not been configured for web - '
-        'you can reconfigure this by running the FlutterFire CLI again.',
-      );
+      return web;
     }
     switch (defaultTargetPlatform) {
       case TargetPlatform.android:
@@ -64,5 +61,13 @@ class DefaultFirebaseOptions {
     projectId: 'elearning-raisa',
     storageBucket: 'elearning-raisa.appspot.com',
     iosBundleId: 'com.example.onlineCourceApp',
+  );
+
+  static const FirebaseOptions web = FirebaseOptions(
+    apiKey: 'AIzaSyCoHuLlxgH4-z6ykQFHZfH4wVg99B1y0Ww',
+    appId: '1:196790250714:web:8f0c8bc48a892b888a89e3',
+    messagingSenderId: '196790250714',
+    projectId: 'elearning-raisa',
+    storageBucket: 'elearning-raisa.appspot.com',
   );
 }

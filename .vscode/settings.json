@@ -1,3 +1,4 @@
 {
-    "cmake.sourceDirectory": "/Users/robin/Downloads/tmp/elearning/linux"
+    "cmake.sourceDirectory": "/Users/robin/Downloads/tmp/elearning/linux",
+    "java.configuration.updateBuildConfiguration": "automatic"
 }

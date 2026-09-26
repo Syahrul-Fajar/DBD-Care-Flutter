@@ -259,7 +259,7 @@ class FullScreenVideoPage extends StatelessWidget {
 class CoursePage extends StatefulWidget {
   final CourseModel course;
 
-  const CoursePage({Key? key, required this.course}) : super(key: key);
+  const CoursePage({super.key, required this.course});
 
   @override
   State<CoursePage> createState() => _CoursePageState();
@@ -415,7 +415,7 @@ class _CoursePageState extends State<CoursePage>
                         value: _currentProgress,
                         backgroundColor: Colors.grey[200],
                         valueColor:
-                            AlwaysStoppedAnimation<Color>(AppTheme.accentColor),
+                            const AlwaysStoppedAnimation<Color>(AppTheme.accentColor),
                         minHeight: 10,
                         borderRadius: BorderRadius.circular(5),
                       ),

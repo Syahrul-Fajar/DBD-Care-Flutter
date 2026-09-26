@@ -14,8 +14,7 @@ import 'package:readmore/readmore.dart';
 class EnhancedCourseDetailsPage extends StatefulWidget {
   final CourseModel course;
 
-  const EnhancedCourseDetailsPage({Key? key, required this.course})
-      : super(key: key);
+  const EnhancedCourseDetailsPage({super.key, required this.course});
 
   @override
   State<EnhancedCourseDetailsPage> createState() =>
@@ -486,7 +485,7 @@ class _EnhancedCourseDetailsPageState extends State<EnhancedCourseDetailsPage>
           const SizedBox(height: 16),
 
           // Review list
-          ...reviews.map((review) => _buildReviewItem(review)).toList(),
+          ...reviews.map((review) => _buildReviewItem(review)),
 
           const SizedBox(height: 16),
           Center(
@@ -528,7 +527,7 @@ class _EnhancedCourseDetailsPageState extends State<EnhancedCourseDetailsPage>
           child: LinearProgressIndicator(
             value: percentage,
             backgroundColor: Colors.grey[200],
-            valueColor: AlwaysStoppedAnimation<Color>(Colors.amber),
+            valueColor: const AlwaysStoppedAnimation<Color>(Colors.amber),
             minHeight: 8,
             borderRadius: BorderRadius.circular(4),
           ),
@@ -748,7 +747,7 @@ class _EnhancedCourseDetailsPageState extends State<EnhancedCourseDetailsPage>
               ),
             ),
           );
-        }).toList(),
+        }),
       ],
     );
   }
@@ -823,7 +822,7 @@ class _EnhancedCourseDetailsPageState extends State<EnhancedCourseDetailsPage>
                     color: AppTheme.primaryColor.withOpacity(0.1),
                     shape: BoxShape.circle,
                   ),
-                  child: Icon(
+                  child: const Icon(
                     Icons.check,
                     color: AppTheme.primaryColor,
                     size: 16,
@@ -842,7 +841,7 @@ class _EnhancedCourseDetailsPageState extends State<EnhancedCourseDetailsPage>
               ],
             ),
           );
-        }).toList(),
+        }),
       ],
     );
   }
@@ -889,7 +888,7 @@ class _EnhancedCourseDetailsPageState extends State<EnhancedCourseDetailsPage>
               ],
             ),
           );
-        }).toList(),
+        }),
       ],
     );
   }
@@ -913,8 +912,8 @@ class _EnhancedCourseDetailsPageState extends State<EnhancedCourseDetailsPage>
             ),
           ),
           beforeLineStyle:
-              LineStyle(color: AppTheme.primaryColor, thickness: 4),
-          afterLineStyle: LineStyle(color: AppTheme.primaryColor, thickness: 4),
+              const LineStyle(color: AppTheme.primaryColor, thickness: 4),
+          afterLineStyle: const LineStyle(color: AppTheme.primaryColor, thickness: 4),
           endChild: _buildTimelineContent(item),
         );
       }),

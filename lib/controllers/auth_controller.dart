@@ -212,7 +212,7 @@ class AuthController extends GetxController {
           .snapshots();
     }
     // Return empty snapshot stream when user is null
-    return Stream.empty();
+    return const Stream.empty();
   }
 
   Future<User?> signUpNewUsers(

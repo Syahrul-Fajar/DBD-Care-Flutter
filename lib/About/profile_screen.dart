@@ -7,7 +7,7 @@ import 'package:online_cource_app/Utils/toast_messages.dart';
 import 'package:online_cource_app/theme/app_theme.dart';
 
 class ProfileScreen extends StatelessWidget {
-  const ProfileScreen({Key? key}) : super(key: key);
+  const ProfileScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -191,7 +191,7 @@ class ProfileScreen extends StatelessWidget {
               Text(
                 title,
                 textAlign: TextAlign.center,
-                style: TextStyle(
+                style: const TextStyle(
                   fontSize: 12,
                   color: AppTheme.secondaryTextColor,
                 ),

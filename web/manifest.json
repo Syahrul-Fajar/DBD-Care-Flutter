@@ -1,11 +1,11 @@
 {
-    "name": "online_cource_app",
-    "short_name": "online_cource_app",
+    "name": "DBD Care",
+    "short_name": "DBD Care",
     "start_url": ".",
     "display": "standalone",
-    "background_color": "#0175C2",
-    "theme_color": "#0175C2",
-    "description": "A new Flutter project.",
+    "background_color": "#1565C0",
+    "theme_color": "#1565C0",
+    "description": "Media edukasi interaktif untuk membantu mengenali gejala, tanda bahaya, dan tindakan awal saat Demam Berdarah Dengue.",
     "orientation": "portrait-primary",
     "prefer_related_applications": false,
     "icons": [

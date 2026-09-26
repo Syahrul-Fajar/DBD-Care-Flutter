@@ -47,7 +47,7 @@ dependencies:
   motion_toast: ^2.10.0
   cloud_firestore: ^5.0.2
   cached_network_image: ^3.4.0
-  google_fonts: ^6.2.1
+  google_fonts: ^8.1.0
   flutter_staggered_animations: ^1.1.1
   animations: ^2.0.11
   timeline_tile: ^2.0.0
@@ -88,34 +88,37 @@ flutter:
   # the material Icons class.
   uses-material-design: true
 
-  # To add assets to your application, add an assets section, like this:
   assets:
     - images/
     - assets/
-  #   - images/a_dot_ham.jpeg
+    - assets/pencegahan/
+    - assets/pengertian/
+    - assets/gejala/
+    - assets/gejala/nyeri_ulu_hati.jpg
+    - assets/gejala/lemas_gelisah.jpg
+    - assets/tanda_bahaya/syok_new.jpg
+    - assets/tanda_bahaya/sesak_napas.jpg
+    - assets/tanda_bahaya/sesak_napas_new.jpg
+    - assets/tanda_bahaya/muntah_darah.jpg
+    - assets/tanda_bahaya/penurunan_kesadaran.jpg
+    - assets/tanda_bahaya/penurunan_kesadaran_new.jpg
+    - assets/tanda_bahaya/nyeri_perut.jpg
+    - assets/tanda_bahaya/nyeri_perut_new.jpg
+    - assets/tanda_bahaya/muntah_terus_menerus.jpg
+    - assets/tanda_bahaya/perdarahan_mukosa_rev.jpg
+    - assets/tanda_bahaya/letargi.jpg
+    - assets/tanda_bahaya/pembesaran_hati.jpg
+    - assets/tanda_bahaya/hematokrit_trombosit.png
+    - fonts/
 
-  # An image asset can refer to one or more resolution-specific "variants", see
-  # https://flutter.dev/assets-and-images/#resolution-aware
-
-  # For details regarding adding assets from package dependencies, see
-  # https://flutter.dev/assets-and-images/#from-packages
-
-  # To add custom fonts to your application, add a fonts section here,
-  # in this "flutter" section. Each entry in this list should have a
-  # "family" key with the font family name, and a "fonts" key with a
-  # list giving the asset and other descriptors for the font. For
-  # example:
-  # fonts:
-  #   - family: Schyler
-  #     fonts:
-  #       - asset: fonts/Schyler-Regular.ttf
-  #       - asset: fonts/Schyler-Italic.ttf
-  #         style: italic
-  #   - family: Trajan Pro
-  #     fonts:
-  #       - asset: fonts/TrajanPro.ttf
-  #       - asset: fonts/TrajanPro_Bold.ttf
-  #         weight: 700
-  #
-  # For details regarding fonts from package dependencies,
-  # see https://flutter.dev/custom-fonts/#from-packages
+  fonts:
+    - family: Poppins
+      fonts:
+        - asset: fonts/Poppins-Regular.ttf
+          weight: 400
+        - asset: fonts/Poppins-Medium.ttf
+          weight: 500
+        - asset: fonts/Poppins-SemiBold.ttf
+          weight: 600
+        - asset: fonts/Poppins-Bold.ttf
+          weight: 700

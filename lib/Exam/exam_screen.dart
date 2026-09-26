@@ -110,7 +110,7 @@ class _ExamScreenState extends State<ExamScreen>
     final output = await getTemporaryDirectory();
     final file = File("${output.path}/certificate.pdf");
 
-    final logo = await rootBundle.rootBundle.load('assets/logo.png');
+    final logo = await rootBundle.rootBundle.load('assets/logo_dbd_care.jpg');
     final logoImage = pw.MemoryImage(logo.buffer.asUint8List());
 
     pdf.addPage(

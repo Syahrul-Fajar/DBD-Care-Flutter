@@ -84,17 +84,17 @@ class _MyHomePageState extends State<MyHomePage>
       focusNode: _searchFocus,
       decoration: InputDecoration(
         hintText: 'Search for courses...',
-        hintStyle: TextStyle(color: AppTheme.secondaryTextColor),
+        hintStyle: const TextStyle(color: AppTheme.secondaryTextColor),
         border: OutlineInputBorder(
           borderRadius: BorderRadius.circular(30),
           borderSide: BorderSide.none,
         ),
         filled: true,
         fillColor: Colors.white,
-        prefixIcon: Icon(Icons.search, color: AppTheme.secondaryTextColor),
+        prefixIcon: const Icon(Icons.search, color: AppTheme.secondaryTextColor),
         contentPadding: const EdgeInsets.symmetric(vertical: 0),
       ),
-      style: TextStyle(color: AppTheme.textColor),
+      style: const TextStyle(color: AppTheme.textColor),
       onSubmitted: (value) {
         // Implement search functionality
       },
@@ -203,7 +203,7 @@ class _MyHomePageState extends State<MyHomePage>
         ),
         TextButton(
           onPressed: onSeeAll,
-          child: Text(
+          child: const Text(
             "See All",
             style: TextStyle(
               color: AppTheme.primaryColor,
@@ -251,7 +251,7 @@ class _MyHomePageState extends State<MyHomePage>
                     value: (index + 1) * 0.25,
                     backgroundColor: Colors.grey.withOpacity(0.2),
                     valueColor:
-                        AlwaysStoppedAnimation<Color>(AppTheme.accentColor),
+                        const AlwaysStoppedAnimation<Color>(AppTheme.accentColor),
                     strokeWidth: 6,
                   ),
                 ),
@@ -262,7 +262,7 @@ class _MyHomePageState extends State<MyHomePage>
                     children: [
                       Text(
                         "Course ${index + 1}",
-                        style: TextStyle(
+                        style: const TextStyle(
                           color: AppTheme.secondaryTextColor,
                           fontWeight: FontWeight.w500,
                         ),
@@ -279,12 +279,12 @@ class _MyHomePageState extends State<MyHomePage>
                         value: (index + 1) * 0.25,
                         backgroundColor: Colors.grey.withOpacity(0.2),
                         valueColor:
-                            AlwaysStoppedAnimation<Color>(AppTheme.accentColor),
+                            const AlwaysStoppedAnimation<Color>(AppTheme.accentColor),
                       ),
                       const SizedBox(height: 8),
                       Text(
                         "${((index + 1) * 25).toString()}% Complete",
-                        style: TextStyle(
+                        style: const TextStyle(
                           color: AppTheme.secondaryTextColor,
                         ),
                       ),
@@ -418,7 +418,7 @@ class _MyHomePageState extends State<MyHomePage>
               errorBuilder: (context, error, stackTrace) => Container(
                 height: 150,
                 color: AppTheme.dividerColor,
-                child: Icon(
+                child: const Icon(
                   Icons.image_not_supported,
                   color: AppTheme.secondaryTextColor,
                   size: 50,
@@ -439,7 +439,7 @@ class _MyHomePageState extends State<MyHomePage>
             children: [
               Row(
                 children: [
-                  Icon(
+                  const Icon(
                     Icons.play_circle_filled,
                     color: AppTheme.primaryColor,
                     size: 16,
@@ -447,7 +447,7 @@ class _MyHomePageState extends State<MyHomePage>
                   const SizedBox(width: 4),
                   Text(
                     "${onlineCourceOne[index]['session']} lessons",
-                    style: TextStyle(
+                    style: const TextStyle(
                       color: AppTheme.secondaryTextColor,
                       fontSize: 13,
                     ),
@@ -456,7 +456,7 @@ class _MyHomePageState extends State<MyHomePage>
               ),
               Text(
                 "৳${onlineCourceOne[index]['price']}",
-                style: TextStyle(
+                style: const TextStyle(
                   color: AppTheme.primaryColor,
                   fontWeight: FontWeight.bold,
                   fontSize: 16,
@@ -473,7 +473,7 @@ class _MyHomePageState extends State<MyHomePage>
   Widget build(BuildContext context) {
     return Scaffold(
       key: scaffoldKey,
-      drawer: CustomDrawer(),
+      drawer: const CustomDrawer(),
       backgroundColor: AppTheme.backgroundColor,
       body: SafeArea(
         child: NestedScrollView(
@@ -487,7 +487,7 @@ class _MyHomePageState extends State<MyHomePage>
                 automaticallyImplyLeading: false,
                 title: _isSearching ? _buildSearchField() : null,
                 leading: IconButton(
-                  icon: Icon(Icons.menu, color: AppTheme.textColor),
+                  icon: const Icon(Icons.menu, color: AppTheme.textColor),
                   onPressed: () {
                     scaffoldKey.currentState?.openDrawer();
                   },
@@ -495,7 +495,7 @@ class _MyHomePageState extends State<MyHomePage>
                 actions: [
                   if (!_isSearching)
                     IconButton(
-                      icon: Icon(Icons.search, color: AppTheme.textColor),
+                      icon: const Icon(Icons.search, color: AppTheme.textColor),
                       onPressed: () {
                         setState(() {
                           _isSearching = true;
@@ -504,7 +504,7 @@ class _MyHomePageState extends State<MyHomePage>
                     ),
                   if (_isSearching)
                     IconButton(
-                      icon: Icon(Icons.close, color: AppTheme.textColor),
+                      icon: const Icon(Icons.close, color: AppTheme.textColor),
                       onPressed: () {
                         setState(() {
                           _isSearching = false;
@@ -665,7 +665,7 @@ class _MyHomePageState extends State<MyHomePage>
                                         const SizedBox(height: 8),
                                         Row(
                                           children: [
-                                            Icon(
+                                            const Icon(
                                               Icons.play_circle_filled,
                                               color: AppTheme.primaryColor,
                                               size: 14,
@@ -673,7 +673,7 @@ class _MyHomePageState extends State<MyHomePage>
                                             const SizedBox(width: 4),
                                             Text(
                                               "${onlineCourceOne[index]['session']} lessons",
-                                              style: TextStyle(
+                                              style: const TextStyle(
                                                 color:
                                                     AppTheme.secondaryTextColor,
                                                 fontSize: 12,
@@ -684,7 +684,7 @@ class _MyHomePageState extends State<MyHomePage>
                                         const Spacer(),
                                         Text(
                                           "৳${onlineCourceOne[index]['price']}",
-                                          style: TextStyle(
+                                          style: const TextStyle(
                                             color: AppTheme.primaryColor,
                                             fontWeight: FontWeight.bold,
                                           ),
